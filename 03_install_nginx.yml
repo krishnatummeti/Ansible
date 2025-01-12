@@ -1,0 +1,21 @@
+---
+- name: install and run nginx in the servers
+  hosts: allservers
+  become: true # -b become root
+
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+  
+  - name: Ensure Nginx service is running
+  ansible.builtin.service:
+    name: nginx
+    pattern: /usr/sbin/nginx
+    state: started
