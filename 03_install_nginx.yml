@@ -13,3 +13,9 @@
     ansible.builtin.service:
       name: nginx
       state: started
+  
+  - name: Ensure Nginx service is running
+    ansible.builtin.service:
+      name: nginx
+      pattern: /usr/sbin/nginx
+      state: started
