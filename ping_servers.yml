@@ -1,0 +1,7 @@
+---
+- name: ping the servers
+  hosts: web
+
+  tasks: # this is noting but modules
+  - name: ping the servers
+    ansible.builtin.ping:
