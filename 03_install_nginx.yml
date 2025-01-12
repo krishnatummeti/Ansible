@@ -13,6 +13,7 @@
     ansible.builtin.service:
       name: nginx
       state: started
+      enabled: yes
   
   - name: Ensure Nginx service is running
     ansible.builtin.service:
