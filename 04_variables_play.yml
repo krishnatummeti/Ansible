@@ -18,3 +18,7 @@
       vars:
       person3: "veera sai"
       msg: "{{ person2 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person3 }}"
+
+  - name: print msg
+    ansible.builtin.debug:
+      msg: "{{ person3 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person2 }}"
