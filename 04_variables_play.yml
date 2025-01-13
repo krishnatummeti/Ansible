@@ -9,16 +9,16 @@
     person3 : "Pujitha"
 
   tasks:
-  - name: print msg
+  - name: print msg1
     ansible.builtin.debug:
       msg: "{{ person1 }} : Hi how are you - > {{ person2 }} , and {{ person3 }}"
 
-  - name: print msg
+  - name: print msg2
     ansible.builtin.debug:
       vars:
-      person3: "veera sai"
+      person3 : "veera sai"
       msg: "{{ person2 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person3 }}"
 
-  - name: print msg
+  - name: print msg3
     ansible.builtin.debug:
       msg: "{{ person3 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person2 }}"
