@@ -2,9 +2,12 @@
 - name: This is msg and variables
   hosts: local
   connection: local
-  become: true
 
   tasks:
   - name: print msg
     ansible.builtin.debug:
       msg: "Hi how are you"
+
+  - name: print msg
+    ansible.builtin.debug:
+      msg: "Hi I am fine thanks"
