@@ -14,8 +14,8 @@
       msg: "{{ person1 }} : Hi how are you - > {{ person2 }} , and {{ person3 }}"
 
   - name: print msg2
-      vars:
-        person3 : "veera sai"
+    vars:
+      person3 : "veera sai"
     ansible.builtin.debug:
         msg: "{{ person2 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person3 }}"
 
