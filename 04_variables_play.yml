@@ -3,15 +3,18 @@
   hosts: local
   connection: local
 
-  var:
-    person1 : Sandeep
-    person2 : Krishna
+  vars:
+    person1 : "Sandeep"
+    person2 : "Krishna"
+    person3 : "Pujitha"
 
   tasks:
   - name: print msg
     ansible.builtin.debug:
-      msg: "{{ person1 }} :Hi how are you"
+      msg: "{{ person1 }} : Hi how are you - > {{ person2 }} , and {{ person3 }}"
 
   - name: print msg
     ansible.builtin.debug:
-      msg: "{{ person2 }}Hi I am fine thanks"
+      vars:
+      person3: "veera sai"
+      msg: "{{ person2 }} : Hi I am fine thanks - > {{ person1 }} and how are you {{ person3 }}"
