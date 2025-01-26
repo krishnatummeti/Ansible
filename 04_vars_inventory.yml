@@ -1,0 +1,27 @@
+---
+- name: this is variables
+  hosts: remote
+    #connection: remote
+  become: yes
+    # vars_files:
+    # - /root/vars_files.yml
+
+  #vars:
+   # job: "Linux Admin"
+   # Salary: "30000"
+   # Location: "HYD"
+   # Companey: "Rimini Street"
+
+  tasks:
+    - name: print var msg
+      #vars:
+      #  job: "DEVOPS"
+      ansible.builtin.debug:
+        msg:
+          - "this is krishna"
+          - "I am working as a {{ job }} , my monthley salary is {{ Salary }} , my location {{ Location }} , I am working for {{ Companey }}"
+    - name: print var msg
+      ansible.builtin.debug:
+        msg:
+          - "this is krishna"
+          - "I am working as a {{ job }} , my monthley salary is {{ Salary }} , my location {{ Location }} , I am working for {{ Companey }}"

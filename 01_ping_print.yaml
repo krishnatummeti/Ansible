@@ -1,0 +1,16 @@
+---
+  - name: ping the server
+    hosts: server
+    become: yes
+  
+    tasks:
+      - name: ping servers
+        ansible.builtin.ping:
+         #ping:
+      - name: print msg
+        ansible.builtin.debug:
+          #debug:
+          msg:
+            - "Hi this is Krishna"
+            - "this is AWS class"
+  

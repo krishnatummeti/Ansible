@@ -1,0 +1,12 @@
+---
+- name: intall vars pkg
+  hosts: localhost
+  become: yes
+  vars:
+    pkg: httpd,git,tree
+
+  tasks:
+    - name: install pakages
+      yum:
+        name: "{{ pkg }}"
+        state: present
