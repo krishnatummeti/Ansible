@@ -21,4 +21,5 @@
         security_group: "{{ sg_id }}"
         image_id: "{{ ami_id }}"
         instance_type: "{{ instance_type }}"
-        
+      loop: "{{ instances }}"
+
